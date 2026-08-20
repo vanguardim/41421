@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-ta-studios.com	TRUE	/	FALSE	1999999999	ta_lang	en
-ta-studios.com	TRUE	/	FALSE	1999999999	sid	s%3Atq6jGiV0r3PDFmVu6qVmr0YvoYJD1rP5.KQP%2BkTXTvV3B%2FzbrnaN1ZPuEECkqiwL8s208TMV3D7U
-ta-studios.com	TRUE	/	FALSE	1999999999	SameSite	Lax
-
