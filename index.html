@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Giriş — Canlı Destek</title>
-  <meta name="description" content="Discord hesabınızla giriş yaparak canlı destek hizmetimizden faydalanın." />
+  <title>VEX Development</title>
+  <meta name="description" content="VEX Development — Canlı destek ve Discord topluluk platformu." />
   <meta name="theme-color" content="#5865F2" />
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -22,186 +22,305 @@
       --radius: 16px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--fg);
       min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(11, 13, 16, 0.7);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--fg);
+    }
+    .navbar-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--discord), #9b59b6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-logo svg { width: 22px; height: 22px; fill: #fff; }
+    .navbar-brand span { font-weight: 800; font-size: 1.1rem; }
+    .navbar-links { display: flex; gap: 8px; align-items: center; }
+    .navbar-links a {
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      color: var(--fg);
+    }
+    .navbar-links a:hover { background: rgba(255,255,255,0.06); }
+    .navbar-links .btn-primary {
+      background: var(--discord);
+      color: #fff;
+    }
+    .navbar-links .btn-primary:hover { background: var(--discord-hover); }
+
+    /* HERO */
+    .hero {
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px;
-    }
-
-    .login-container {
-      width: 100%;
-      max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .logo-area {
       text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
     }
-
-    .logo-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, var(--discord), #9b59b6);
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(88,101,242,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
       display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(88,101,242,0.08);
+      color: #8b9aff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #57f287;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(135deg, var(--discord), #9b59b6, #e040fb);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 500px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .hero-actions a:active { transform: scale(0.97); }
+    .hero-actions .btn-discord {
+      background: var(--discord);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(88,101,242,0.3);
+    }
+    .hero-actions .btn-discord:hover { box-shadow: 0 10px 32px rgba(88,101,242,0.4); transform: translateY(-1px); }
+    .hero-actions .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--fg);
+      background: rgba(255,255,255,0.03);
+    }
+    .hero-actions .btn-ghost:hover { background: rgba(255,255,255,0.06); }
+    .hero-actions svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* FEATURES */
+    .features {
+      padding: 80px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .features .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      padding: 28px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      border-color: rgba(88,101,242,0.3);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(88,101,242,0.1);
+      display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      box-shadow: 0 12px 40px rgba(88, 101, 242, 0.3);
+      color: var(--discord);
     }
+    .feature-icon svg { width: 22px; height: 22px; fill: currentColor; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 
-    .logo-icon svg {
-      width: 36px;
-      height: 36px;
-      fill: #fff;
-    }
-
-    .logo-area h1 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .logo-area p {
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: 0.95rem;
-    }
-
-    .login-card {
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .login-card h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .login-card p {
-      color: var(--muted);
-      font-size: 0.88rem;
+    /* FOOTER */
+    footer {
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
       text-align: center;
-      line-height: 1.5;
-    }
-
-    .discord-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      max-width: 320px;
-      padding: 14px 24px;
-      background: var(--discord);
-      color: #fff;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 6px 20px rgba(88, 101, 242, 0.35);
-    }
-
-    .discord-btn:hover {
-      background: var(--discord-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 28px rgba(88, 101, 242, 0.45);
-    }
-
-    .discord-btn:active {
-      transform: translateY(0);
-    }
-
-    .discord-btn svg {
-      width: 22px;
-      height: 22px;
-      fill: #fff;
-    }
-
-    .links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .links a {
       color: var(--muted);
       font-size: 0.82rem;
+    }
+    footer a {
+      color: var(--muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-
-    .links a:hover {
-      color: var(--fg);
-    }
-
-    .footer-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 12px;
-      opacity: 0.6;
-    }
+    footer a:hover { color: var(--fg); }
   </style>
 </head>
 
 <body>
-  <div class="login-container">
-    <div class="logo-area">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/>
-        </svg>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <div class="navbar-logo">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
       </div>
-      <h1>Canlı Destek</h1>
-      <p>Discord ile giriş yaparak destek ekibimize ulaşın.</p>
+      <span>VEX Development</span>
+    </a>
+    <div class="navbar-links">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="ta-studios.com/canli-destek.html">Canlı Destek</a>
+      <a href="https://discord.com/api/oauth2/authorize?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=identify%20email&client_id=1539324425080676433" class="btn-primary">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#fff"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
+        Giriş Yap
+      </a>
     </div>
+  </nav>
 
-    <div class="login-card">
-      <h2>Hoş Geldiniz</h2>
-      <p>Devam etmek için Discord hesabınızla giriş yapın. Profil bilgileriniz güvenlik amacıyla kullanılacaktır.</p>
-
-      <a href="https://discord.com/api/oauth2/authorize?response_type=code&redirect_uri=https%3A%2F%2Fta-studios.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&scope=identify%20email%20guilds%20guilds.members.read&client_id=1177540684530602014" class="discord-btn">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/>
-        </svg>
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Aktif Destek
+    </div>
+    <h1>
+      <span class="grad">VEX Development</span><br>
+      Destek Platformu
+    </h1>
+    <p>
+      Discord hesabınızla giriş yaparak canlı destek ekibimize ulaşın.
+      Taleplerinizi anlık olarak takip edin.
+    </p>
+    <div class="hero-actions">
+      <a href="https://discord.com/api/oauth2/authorize?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=identify%20email&client_id=1539324425080676433" class="btn-discord">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
         Discord ile Giriş Yap
       </a>
+      <a href="ta-studios.com/canli-destek.html" class="btn-ghost">Canlı Destek</a>
+    </div>
+  </section>
 
-      <div class="links">
-        <a href="ta-studios.com/canli-destek.html">Canlı Destek</a>
+  <section id="ozellikler" class="features">
+    <h2>Neden VEX Development?</h2>
+    <p class="subtitle">Hızlı, güvenilir ve topluluk odaklı destek.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3>Hızlı Yanıt</h3>
+        <p>Destek talepleriniz mümkün olan en kısa sürede yanıtlanır.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        </div>
+        <h3>Güvenli Altyapı</h3>
+        <p>Discord OAuth2 ile güvenli giriş, verileriniz korunur.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+        </div>
+        <h3>Anlık Takip</h3>
+        <p>Taleplerinizi gerçek zamanlı olarak takip edebilirsiniz.</p>
       </div>
     </div>
+  </section>
 
-    <p class="footer-note">Giriş yaparak kullanım şartlarını kabul etmiş olursunuz.</p>
-  </div>
+  <footer>
+    <p>&copy; <span id="year"></span> VEX Development. Tüm hakları saklıdır.</p>
+    <p style="margin-top:8px">
+      <a href="ta-studios.com/canli-destek.html">Canlı Destek</a> &middot;
+      <a href="https://discord.gg/vexdev" target="_blank" rel="noopener noreferrer">Discord</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

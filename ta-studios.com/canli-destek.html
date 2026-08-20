@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Canlı Destek</title>
-  <meta name="description" content="Discord hesabınızla giriş yaparak canlı destek hizmetimizden faydalanın." />
+  <title>Canlı Destek — VEX Development</title>
+  <meta name="description" content="VEX Development canlı destek hizmeti. Discord hesabınızla giriş yaparak destek ekibimize ulaşın." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)" />
@@ -28,7 +28,7 @@
         <div class="brand-logo" style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#5865F2,#9b59b6);display:flex;align-items:center;justify-content:center;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
         </div>
-        <span class="brand-text">Destek</span>
+        <span class="brand-text">VEX Development</span>
       </a>
 
       <button
@@ -43,6 +43,10 @@
       </button>
 
       <nav id="nav-menu" class="menu" aria-label="Ana menü">
+        <a class="btn" href="../index.html">
+          <iconify-icon icon="lucide:home" aria-hidden="true"></iconify-icon>
+          <span>Ana Sayfa</span>
+        </a>
         <a class="btn nav-support-cta" href="canli-destek.html">
           <iconify-icon icon="lucide:headphones" aria-hidden="true"></iconify-icon>
           <span>Canlı Destek</span>
@@ -160,7 +164,7 @@
             <form
               id="logoutForm"
               method="post"
-              action="https://ta-studios.com/api/auth/logout"
+              action="https://localhost:3000/api/auth/logout"
               hidden
             >
               <button class="btn ghost" type="submit">
@@ -201,7 +205,7 @@
               <a
                 id="supportDiscordLoginBtn"
                 class="btn primary support-auth-action"
-                href="https://discord.com/api/oauth2/authorize?prompt=consent&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fta-studios.com%2Fapi%2Fauth%2Fdiscord%2Fcallback&amp;scope=identify%20email%20guilds%20guilds.members.read%20role_connections.write&amp;state=ta1.eyJuZXh0IjoiL2FwaS9iYWdsYW50aWxhci92ZXJpZnkcmV0dXJuPSUyRmNhbmxpLWRlc3RlayZyZWxpbms9MSZyZWF1dGg9MSIsImFwcE1vZGUiOiJ3ZWIiLCJsYW5nIjoiZW4iLCJub25jZSI6Imc4X0wxSEdrZ0hVT094SHJmQktJNXl6bWNQVEd0Rk9DUkxIUFFCVm5yYUUiLCJpc3N1ZWRBdCI6MTc4NzI1MzczMDM0NSwiZmxvdyI6ImxpbmtlZF9yb2xlcyJ9.N6OPbvi-A5DSsyVt-qt3-5hpDpBHkdt65FZP4WpfUWo&amp;client_id=1177540684530602014"
+                href="https://discord.com/api/oauth2/authorize?prompt=consent&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&amp;scope=identify%20email&amp;client_id=1539324425080676433"
               >
                 <span class="support-auth-action-label">
                   <span class="support-auth-action-word">
@@ -680,15 +684,15 @@
         <div class="brand-logo" style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#5865F2,#9b59b6);display:flex;align-items:center;justify-content:center;flex:0 0 36px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
         </div>
-        <span class="brand-text">Destek</span>
+        <span class="brand-text">VEX Development</span>
       </div>
 
       <div class="foot-links legal-actions">
-        <a class="btn" href="index.html">Giriş Sayfası</a>
+        <a href="../index.html">Ana Sayfa</a>
       </div>
 
       <div class="social">
-        <a href="https://discord.com/invite/taf" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.gg/vexdev" target="_blank" rel="noopener noreferrer">
           <iconify-icon icon="simple-icons:discord" aria-hidden="true"></iconify-icon>
           <span>Discord</span>
         </a>
