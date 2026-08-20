@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oembed>
+  <version>1.0</version>
+  <type>rich</type>
+  <provider_name>TA Studios</provider_name>
+  <provider_url>https://ta-studios.com/</provider_url>
+  <author_name>TA Studios</author_name>
+  <author_url>https://ta-studios.com/</author_url>
+  <title>TA Studios</title>
+  <description>Roblox Türkiye&apos;nin sevileni: TA Studios. Projelerimizi keşfet, ekibe katıl, Discord’umuza gel.</description>
+  <url>https://ta-studios.com/</url>
+  <html>&lt;a href=&quot;https://ta-studios.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://ta-studios.com/Assets/Image/Icons/logo-banner.png&quot; alt=&quot;TA Studios&quot; width=&quot;1200&quot; height=&quot;675&quot;&gt;&lt;/a&gt;</html>
+  <width>1200</width>
+  <height>675</height>
+  <thumbnail_url>https://ta-studios.com/Assets/Image/Icons/logo-banner.png</thumbnail_url>
+  <thumbnail_width>1920</thumbnail_width>
+  <thumbnail_height>1080</thumbnail_height>
+  <cache_age>86400</cache_age>
+</oembed>

@@ -1,0 +1,31 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 20 Aug 2026 22:21:51 at https://ta-studios.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://ta-studios.com/ -O1 "C:\Users\mehme\Desktop\vex-dev" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:22:06	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=5qUjKquhxgq_d3WEE5yL9m6j9R.ndvlH5sKL.V0m_mc-1787253713.3567777-1.2.1.1-UeKnqzBagt.lCKpHP4OcNOiLHwlU.4Qm6gsvCh2xB5uVQbmX1La2nqjfTqNloZvo not scanned (follow robots meta tag)
+22:22:24	Warning: 	Warning: store application/octet-stream without scan: C:/Users/mehme/Desktop/vex-dev/ta-studios.com/Assets/Image/Flags/tr.svg
+22:22:24	Warning: 	Warning: store application/octet-stream without scan: C:/Users/mehme/Desktop/vex-dev/ta-studios.com/Assets/Image/Flags/us.svg
+22:22:24	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=xIFsizSUMgi24bEuZBaXn4tBQPdMqWYHyxf5qXCQmwg-1787253721.5136175-1.2.1.1-V_XOsnEwhm1aLr3zG3X5iqZxXPmW58mIUuhqO3wz8Fn1hqCThACaLrGV4.JQjhK. not scanned (follow robots meta tag)
+22:22:24	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=Tv3AvVxmoPY9aX9ROBHVsc1bWxzL76yET7lIHzQo5Js-1787253721.6703265-1.2.1.1-NBAPF3DR4L7xMv8gG.j11Tei86_nSlVcnPzxl5B8wQlR2lUDxfme9kJW52cLV1zb not scanned (follow robots meta tag)
+22:22:24	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=kHAGPw5ZX2_lLIVafh3r6pnHAa.LotingQtLyJ1b.3E-1787253721.8834288-1.2.1.1-wlPciAsfIlXUKc09hebXlSUEyHo3W5bbK84M3WW_RdqHdxx5QiZJxRO4lx2bFPtC not scanned (follow robots meta tag)
+22:22:24	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=_U9jCDK.nCC0wXluOEL3mC5aNrGW1JVxidfgMT2ickk-1787253722.507269-1.2.1.1-E_3LAp2rwmgZ546dyzaOzxkxSR80_Gc7QswZ1oWUnMvJihkYzF6rxRbobtYcYqYf not scanned (follow robots meta tag)
+22:22:27	Error: 	"Not Found" (404) at link https://ta-studios.com/cdn-cgi/l/email-protection (from https://ta-studios.com/legal/hizmet-sartlari)
+22:22:27	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=r3Y8sui5dUtwza1jbIqfHsRdAb_6RH22afjPpDn8Mao-1787253722.7601936-1.2.1.1-D7TN6fyKjFEtKi0056Mfwd.ovHQodguRXnJHtyguuGuwGEq8tk8ip1xAkJMcO0If not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=95TbRQAmXszeVXu1OibEQB8AjaQxRVWcG_ujsw3SHPg-1787253722.9733937-1.2.1.1-G8NAKqxoznLq62SwALDCM_iYIA1.KxgePpxjZbXwXe82A1Fu1ir2YT.XiRP3krHm not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=SYz6K5i52lY6_tYaWR0b0xLZMlI6_Dr_sPvb2X_a8Vw-1787253723.1851032-1.2.1.1-ePxPLB5YW01qls4PqlWm4JJW87b1XYyl1AHZ6pnmDk1pxOjoqHkUvEfm1UpspL3R not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=sY.o_hHiwsVZtK2ttYfzIA75XqWNZD1aOG2z1LkQ.f4-1787253723.3911455-1.2.1.1-dGPxF.MwlBvC79ubpAiFZjE0vinDDREWVWCSYy05jJae7EBRHNI96e4dsaeO3_BX not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=4ktv60YO.iq0Kc6tjpPLaY1.Dy2wP_Q2lScRASr3lk4-1787253723.5947635-1.2.1.1-N_9gXtt6gl1NnVeQmrTZ.nZne1r3SZHO.LgsqOg6Z_RckF2.YydgyVwa18wghk47 not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=nkKIluQWkrlqSedTC0kEbzdiFVw5268ys8sEQvPKSxQ-1787253737.2455049-1.2.1.1-SPRBnQW8nsyLgdk5PHIFJjVhmHu0PrjByfx85xX0dGrhQwnFvMzXwrJQ6Teyv5dN not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=Y68.FEkN.qMn2qdAIts_aNfZhXi8OkOOSqIyh3j.bmU-1787253737.4748824-1.2.1.1-4r2M67BfNtbw6F9lZ4lQVP3m9SZ7NJ0HAcDTRfmmIsk_DfzwLWccUe4I1g3OfdVm not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=ENqCmGpxLyPZH68eeXeP35Ll_2Jo1ouCfmtpQsRCxX4-1787253737.734704-1.2.1.1-_UGwEZx9MniEkHjsVwVCNmYFNb4uNVNdXeWp0VY.mXhJQx51DW3Ms1Za9S4NUzFh not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=s52shgUn_1KholXRrAD2L8EU6V.sZ_fs9eF6yoJqok8-1787253737.9724631-1.2.1.1-vLgrxs.bG2c5nJJ2VVhsF_Ui28hh9WvrXV1K71Va1nelqc9HXMLRqv4wJMfikVD9 not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=AcHvwq49D_pj1jybU1vMdAMEzjVL9Ga7aA5nrBssgBA-1787253738.1816516-1.2.1.1-yoDY8GB3ZzzPeolTlAAiMXHQY3zkCLyU07L9U4_EEKnqBUyadJR7.YYIJFzEUOgC not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=eO1PCzL.n3B27BZQnP1e0vBR6edvxQjihU9BdvAQJY0-1787253738.6484983-1.2.1.1-byyWdbKSKaVOzRgbaUhLU4R_uV5TTZLeYKz5QPqw2950RMA6onpT0jb51S54cATU not scanned (follow robots meta tag)
+22:22:29	Warning: 	Link https://ta-studios.com/cdn-cgi/content?id=6wU_WxRDJcVQocCg_FAD5De42.8G.9SxVX55Ny0GHIk-1787253741.6059854-1.2.1.1-pjgtysPgLsqBlKNmi0Ptm.sQdXyLjzxK2Pv_h.juWoqauu83Aazd5_rRNpgwn6SP not scanned (follow robots meta tag)
+
+HTTrack Website Copier/3.49-2 mirror complete in 38 seconds : 95 links scanned, 93 files written (3596576 bytes overall) [2480239 bytes received at 65269 bytes/sec], 1760198 bytes transferred using HTTP compression in 70 files, ratio 22%, 42.3 requests per connection
+(1 errors, 19 warnings, 0 messages)
